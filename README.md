@@ -63,9 +63,14 @@
 ### Проверка обновлений
 - При запуске игры плагин разово опрашивает GitHub Releases этого репозитория и сравнивает версию с установленной.
 - Результат пишется в `BepInEx\LogOutput.log` и дублируется в игровую консоль:
-  - **зелёная строка** — установлена последняя версия;
+  - **обычная строка** — установлена последняя версия;
   - **оранжевое предупреждение** — доступна более новая версия (со ссылкой на страницу релизов).
 - Запрос отправляется один раз за запуск, тайм-аут 8 сек., никакой телеметрии не собирается.
+
+### Интеграция с QoL «Mods» (если установлен QoL.Unknown)
+- В игровой вкладке `Настройки → Mods` рядом с нашим плагином корректно показывается версия (`v1.2.0.0`).
+- Кнопка **Open Nexus** в строке мода перенаправляет прямо на нашу [страницу релизов GitHub](https://github.com/naduvaha/MultyModik/releases).
+- Если QoL.Unknown не установлен, ничего не делает и не падает.
 
 ## Установка
 
@@ -154,6 +159,11 @@ A single standalone plugin DLL — no changes to the game's own DLLs.
   - **plain line** — you are on the latest version;
   - **orange warning** — a newer version is available (with a link to the releases page).
 - One request per launch, 8-second timeout, no telemetry.
+
+### QoL "Mods" tab integration (if QoL.Unknown is installed)
+- The in-game `Settings → Mods` tab shows the correct version (`v1.2.0.0`) next to our plugin.
+- The **Open Nexus** button on the row opens our [GitHub releases page](https://github.com/naduvaha/MultyModik/releases) directly.
+- Does nothing (and does not crash) if QoL.Unknown is not installed.
 
 ## Install
 
