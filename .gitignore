@@ -28,6 +28,11 @@
 *.so.*
 *.dylib
 
+# ...but always track the shipped plugin so it can be committed / released from this folder.
+!MultyModikByStaili.dll
+MultyModikByStaili.dll
+MultyModikByStaili.pdb
+
 # Executables
 *.exe
 *.out
