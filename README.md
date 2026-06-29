@@ -4,6 +4,7 @@
 
 **Version / Версия:** `1.2.0`
 **Plugin / Плагин:** `MultyModikByStaili.dll`
+**Releases:** [github.com/naduvaha/MultyModik/releases](https://github.com/naduvaha/MultyModik/releases)
 **Hard dependency / Жёсткая зависимость:** [KrokoshaCasualtiesMP (KrokMP)](https://cucorelib.web.app/)
 
 ---
@@ -58,6 +59,13 @@
 - Бонус накапливается каждые ~2 секунды и масштабируется от числа соседей-сонь (cap-кратно).
 - Полностью серверно: хост проверяет, кто спит, кто рядом, и подбрасывает настроение через стандартную синхронизацию тел.
 - Работает автоматически — никаких кнопок, активируется самим фактом совместного сна.
+
+### Проверка обновлений
+- При запуске игры плагин разово опрашивает GitHub Releases этого репозитория и сравнивает версию с установленной.
+- Результат пишется в `BepInEx\LogOutput.log` и дублируется в игровую консоль:
+  - **зелёная строка** — установлена последняя версия;
+  - **оранжевое предупреждение** — доступна более новая версия (со ссылкой на страницу релизов).
+- Запрос отправляется один раз за запуск, тайм-аут 8 сек., никакой телеметрии не собирается.
 
 ## Установка
 
@@ -139,6 +147,13 @@ A single standalone plugin DLL — no changes to the game's own DLLs.
 - Bonus pays out every ~2 seconds and scales with the number of nearby sleepers (capped).
 - Fully server-side: the host scans who's asleep and who's near them, and tops up happiness through the standard body sync.
 - Fully automatic — no buttons, it just activates by sleeping near teammates.
+
+### Update check
+- On game launch the plugin makes a single request to this repository's GitHub Releases and compares the latest tag with the installed version.
+- The result is written to `BepInEx\LogOutput.log` and mirrored into the in-game console:
+  - **plain line** — you are on the latest version;
+  - **orange warning** — a newer version is available (with a link to the releases page).
+- One request per launch, 8-second timeout, no telemetry.
 
 ## Install
 
