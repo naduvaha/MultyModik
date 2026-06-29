@@ -29,7 +29,7 @@
 
 ### Динамическая сложность мобов
 - Множитель спавна враждебных существ: 100 % (ваниль) — до 1000 %.
-- Минимальный множитель растёт от командного лимита возрождений (6+ → 200 %, 40+ → 600 %, 50 → 1000 %).
+- Минимальный множитель растёт от командного лимита возрождений (4+ → 200 %, 40+ → 600 %, 50 → 1000 %).
 - Отдельная настройка «время миссии» (1–300 %) со своими штрафами к спавну.
 - Пользовательские значения сохраняются и возвращаются, когда штрафы снимаются.
 
@@ -122,7 +122,7 @@ A single standalone plugin DLL — no changes to the game's own DLLs.
 
 ### Dynamic mob difficulty
 - Hostile spawn multiplier: 100 % (vanilla) up to 1000 %.
-- Floor multiplier scales with the team respawn pool (6+ → 200 %, 40+ → 600 %, 50 → 1000 %).
+- Floor multiplier scales with the team respawn pool (4+ → 200 %, 40+ → 600 %, 50 → 1000 %).
 - Separate "mission time" setting (1–300 %) with its own spawn penalties.
 - Your custom values are remembered and restored when penalties are lifted.
 
