@@ -2,7 +2,7 @@
 
 [Русский](#русский) | [English](#english)
 
-**Version / Версия:** `1.2.0`
+**Version / Версия:** `1.3.0`
 **Plugin / Плагин:** `MultyModikByStaili.dll`
 **Releases:** [github.com/naduvaha/MultyModik/releases](https://github.com/naduvaha/MultyModik/releases)
 **Hard dependency / Жёсткая зависимость:** [KrokoshaCasualtiesMP (KrokMP)](https://cucorelib.web.app/)
@@ -54,6 +54,17 @@
 - Визуальные «+1» над игроками и реплики в чат.
 - Авто-отмена при гибели одного из участников или разрыве дистанции.
 
+### Доп. вооружение по слоям — новое в 1.3.0
+- Отдельный блок в меню правил забега: «Доп. вооружение».
+- Компактный UI: ряд табов слоёв `1..6` + 5 слайдеров по типам оружия (звуковая пушка, песчаная турель, электрокатушка, мина-винтовка, обычная мина).
+- Плотность задаётся в процентах от «ванильной нормы» этого оружия:
+  - **0%** — ничего не добавляется (ваниль не трогается совсем).
+  - **100%** — добавляется примерно столько же, сколько ставит ваниль в естественной зоне обитания.
+  - До **500%** для хардкора.
+- Ванильный спавн не трогается — мы только **дополнительно** ставим объекты после окончания worldgen.
+- Хост может, например, насыпать звуковых пушек на 1-2 слой, расставить турели в любом биоме и т.п.
+- Сохраняется в пресете правил вместе с остальными настройками; синхронизируется клиентам.
+
 ### Бонус «Сон в обнимку» (Sleep Buddy) — новое в 1.2.0
 - Когда два или больше игроков спят рядом (в радиусе ~6 блоков), у всех в группе медленно растёт настроение.
 - Бонус накапливается каждые ~2 секунды и масштабируется от числа соседей-сонь (cap-кратно).
@@ -68,7 +79,7 @@
 - Запрос отправляется один раз за запуск, тайм-аут 8 сек., никакой телеметрии не собирается.
 
 ### Интеграция с QoL «Mods» (если установлен QoL.Unknown)
-- В игровой вкладке `Настройки → Mods` рядом с нашим плагином корректно показывается версия (`v1.2.0.0`).
+- В игровой вкладке `Настройки → Mods` рядом с нашим плагином корректно показывается версия (`v1.3.0.0`).
 - Кнопка **Open Nexus** в строке мода перенаправляет прямо на нашу [страницу релизов GitHub](https://github.com/naduvaha/MultyModik/releases).
 - Если QoL.Unknown не установлен, ничего не делает и не падает.
 
@@ -147,6 +158,17 @@ A single standalone plugin DLL — no changes to the game's own DLLs.
 - Floating "+1" indicators above players and chat barks.
 - Auto-cancels if either side dies or they walk out of range.
 
+### Per-layer extra weapons — new in 1.3.0
+- Dedicated "Extra weapons" block in the run-rules menu.
+- Compact UI: a row of layer tabs `1..6` + 5 sliders per weapon (sound cannon, sand turret, electric coil, gun mine, mine).
+- Density is set as a percent of the vanilla baseline for that weapon:
+  - **0%** — nothing added (vanilla untouched).
+  - **100%** — roughly as common as in its natural habitat.
+  - Up to **500%** for hardcore setups.
+- Vanilla world-gen is left intact — extras are placed AFTER worldgen finishes.
+- Host can sprinkle sound cannons on layer 1-2, scatter turrets in any biome, etc.
+- Saved as part of the rules preset and synced to clients.
+
 ### "Sleep Buddy" bonus — new in 1.2.0
 - When two or more players are sleeping close together (within ~6 blocks), everyone in the group slowly gains mood.
 - Bonus pays out every ~2 seconds and scales with the number of nearby sleepers (capped).
@@ -161,7 +183,7 @@ A single standalone plugin DLL — no changes to the game's own DLLs.
 - One request per launch, 8-second timeout, no telemetry.
 
 ### QoL "Mods" tab integration (if QoL.Unknown is installed)
-- The in-game `Settings → Mods` tab shows the correct version (`v1.2.0.0`) next to our plugin.
+- The in-game `Settings → Mods` tab shows the correct version (`v1.3.0.0`) next to our plugin.
 - The **Open Nexus** button on the row opens our [GitHub releases page](https://github.com/naduvaha/MultyModik/releases) directly.
 - Does nothing (and does not crash) if QoL.Unknown is not installed.
 
