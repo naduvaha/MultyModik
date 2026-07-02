@@ -60,7 +60,7 @@
 - Плотность задаётся в процентах от «ванильной нормы» этого оружия:
   - **0%** — ничего не добавляется (ваниль не трогается совсем).
   - **100%** — добавляется примерно столько же, сколько ставит ваниль в естественной зоне обитания.
-  - До **500%** для хардкора.
+  - До **1000%** для хардкора.
 - Ванильный спавн не трогается — мы только **дополнительно** ставим объекты после окончания worldgen.
 - Хост может, например, насыпать звуковых пушек на 1-2 слой, расставить турели в любом биоме и т.п.
 - Сохраняется в пресете правил вместе с остальными настройками; синхронизируется клиентам.
@@ -164,7 +164,7 @@ A single standalone plugin DLL — no changes to the game's own DLLs.
 - Density is set as a percent of the vanilla baseline for that weapon:
   - **0%** — nothing added (vanilla untouched).
   - **100%** — roughly as common as in its natural habitat.
-  - Up to **500%** for hardcore setups.
+  - Up to **1000%** for hardcore setups.
 - Vanilla world-gen is left intact — extras are placed AFTER worldgen finishes.
 - Host can sprinkle sound cannons on layer 1-2, scatter turrets in any biome, etc.
 - Saved as part of the rules preset and synced to clients.
